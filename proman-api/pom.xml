@@ -111,6 +111,7 @@
                     </dependency>
                 </dependencies>
                 <executions>
+
                     <execution>
                         <id>signup</id>
                         <goals>
@@ -121,6 +122,7 @@
                             <language>spring</language>
                         </configuration>
                     </execution>
+
                     <execution>
                         <id>useradmin</id>
                         <goals>
@@ -131,6 +133,18 @@
                             <language>spring</language>
                         </configuration>
                     </execution>
+
+                    <execution>
+                        <id>authentication</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/endpoints/authentication.json</inputSpec>
+                            <language>spring</language>
+                        </configuration>
+                    </execution>
+
                 </executions>
             </plugin>
         </plugins>
